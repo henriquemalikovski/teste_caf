@@ -11,10 +11,10 @@ app.use(express.json());
 app.use("/api/caf", (req, res) => {
   res.status(200).json([
     {
-      total_docs: 250,
-      docs_5min: 55,
-      docs_10min: 20,
-      docs_15min: 15,
+      total_docs: process.env.total_docs,
+      docs_5min: process.env.docs_5min,
+      docs_10min: process.env.docs_10min,
+      docs_15min: process.env.docs_15min,
     },
   ]);
 });
